@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: test-scriptgen-sept3 
+  description: Secure Supply Chain Example for Code Generation Application example that generate code in countless programming languages.   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:
+    # ArgoCD apps from this template used rhtap-gitops as the grouping
+    argocd/app-selector: rhtap/gitops=test-scriptgen-sept3  
+    janus-idp.io/tekton: test-scriptgen-sept3 
+    backstage.io/kubernetes-id: test-scriptgen-sept3 
+    backstage.io/techdocs-ref: dir:. 
+    quay.io/repository-slug: jdubrick-ai/test-scriptgen-sept3
+  tags: ["ai", "llamacpp", "vllm", "python"] 
+spec:
+  type: service
+  owner: user:guest 
+  lifecycle: experimental
+ 
